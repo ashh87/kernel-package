@@ -97,7 +97,7 @@ class Options:
             lines = [f.next() for x in xrange(5)]
         i = 0
         for line in lines:
-            self.ver[i] = re.sub(r"^.* = (.*)\n$", r"\1", line)
+            self.ver[i] = re.sub(r"^.*\s*=\s*(.*)\n$", r"\1", line)
             i += 1
         if "=" in self.ver[3]:
             self.ver[3] = None
